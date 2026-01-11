@@ -5,7 +5,10 @@ export const Container = styled.div`
   padding: 20px;
   border-radius: 10px;
   width: 100%;
-  max-width: 500px; // Evita que a lista fique larga demais
+  height: auto;
+  max-width: 500px; // Evita que a lista fique larga demais~
+  max-height: 570px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   h1 {
     color: #fff;
@@ -76,6 +79,22 @@ export const AddButton = styled.button`
 
   &:hover {
     opacity: 0.8;
+  }
+`;
+
+export const ListContainer = styled.div`
+  max-height: 300px; /* Define a altura máxima da lista antes de aparecer o scroll */
+  overflow-y: auto; /* Ativa o scroll vertical quando necessário */
+  margin-top: 20px;
+  padding-right: 5px; /* Espaço para a barra de scroll não cobrir o botão da lixeira */
+
+  /* Personalização da barra de scroll (opcional, para ficar mais bonito) */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
   }
 `;
 

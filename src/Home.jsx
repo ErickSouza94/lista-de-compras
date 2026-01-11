@@ -8,6 +8,7 @@ import {
   Product,
   ClearButton,
   QntButton,
+  ListContainer
 } from "./styles";
 
 function Home() {
@@ -80,7 +81,7 @@ function Home() {
         <AddButton onClick={botaoAdicionar}>Adicionar</AddButton>
       </div>
 
-      <div>
+      <ListContainer>
         {produtos.map((produto) => (
           <Product key={produto.id} $isComprado={produto.comprado}>
             <div className="infoProduto">
@@ -102,7 +103,7 @@ function Home() {
             </button>
           </Product>
         ))}
-      </div>
+      </ListContainer>
       <div>
         <ClearButton className="clear" onClick={limparLista}>
           Limpar Lista
