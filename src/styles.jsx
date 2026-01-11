@@ -13,33 +13,52 @@ export const Container = styled.div`
 
   input {
     height: 35px;
+    margin: 8px;
     border-radius: 5px;
     border: none;
     margin-top: 30px;
     outline: none;
     padding-left: 10px;
+    font-weight: bold;
   }
 
   span {
     padding: 5px;
     font-weight: bolder;
   }
+
+  .quantidade {
+    font-size: 18px;
+    background-color: #ffffff70;
+  }
 `;
 
 // Criei um componente específico para os botões de + e -
 // assim eles não bagunçam o estilo dos outros botões
-export const QntButton = styled.button`
-  padding: 8px;
-  margin: 5px;
-  height: 35px;
-  width: 35px;
-  border-radius: 25%;
-  border: none;
-  cursor: pointer;
+export const QntButton = styled.button.attrs({ className: "addProduto" })`
+  width: 36px; /* Aumentei de 35px para 45px */
+  height: 40px; /* Aumentei de 35px para 45px */
+  display: inline-flex; /* Para centralizar o símbolo perfeitamente */
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 10px; /* Mais espaço nas laterais */
   background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Ficou menos circular, mais moderno */
+  cursor: pointer;
+
+  font-size: 24px; /* Aumenta o tamanho do + e do - */
+  font-weight: bold;
+  color: #333;
 
   &:hover {
     background-color: #ddd;
+  }
+
+  &:active {
+    background-color: #ccc;
+    transform: scale(0.95); /* Efeito de clique */
   }
 `;
 
@@ -48,10 +67,12 @@ export const AddButton = styled.button`
   color: #000;
   height: 40px;
   padding: 0 15px;
+  margin: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 16px;
 
   &:hover {
     opacity: 0.8;

@@ -7,6 +7,7 @@ import {
   CheckInput,
   Product,
   ClearButton,
+  QntButton,
 } from "./styles";
 
 function Home() {
@@ -61,15 +62,21 @@ function Home() {
   }
   return (
     <Container>
-      <div>
+      <div className="addProduto">
         <h1>Lista de Compras</h1>
-        <input placeholder="produto..." ref={refProduto} />
-        <button onClick={() => quantidade > 1 && setQuantidade(quantidade - 1)}>
+        <input
+          className="inputProduto"
+          placeholder="produto..."
+          ref={refProduto}
+        />
+        <QntButton
+          onClick={() => quantidade > 1 && setQuantidade(quantidade - 1)}
+        >
           {" "}
           -{" "}
-        </button>
-        <span>{quantidade}</span>
-        <button onClick={() => setQuantidade(quantidade + 1)}>+</button>
+        </QntButton>
+        <span className="quantidade">{quantidade}</span>
+        <QntButton onClick={() => setQuantidade(quantidade + 1)}>+</QntButton>
         <AddButton onClick={botaoAdicionar}>Adicionar</AddButton>
       </div>
 
