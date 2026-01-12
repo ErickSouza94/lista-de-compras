@@ -19,7 +19,7 @@ export const Container = styled.div`
     margin: 8px;
     border-radius: 5px;
     border: none;
-    margin-top: 30px;
+    // margin-top: 30px;
     outline: none;
     padding-left: 10px;
     font-weight: bold;
